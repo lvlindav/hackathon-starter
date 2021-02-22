@@ -12,11 +12,10 @@ install:
 script:
   - npm run lint
   - npm test
-  deploy:
+deploy:
   - provider: script
     skip_cleanup: true
     script: chmod +x ./deploy.sh && ./deploy.sh
     on:
       branch: master
-
 
